@@ -1,59 +1,56 @@
 <script lang="ts">
   import type { Sound } from '$lib/data/sound'
+  import { onMount } from 'svelte'
+  import { lazyLoadSound } from './button/lazyload'
 
   export let sound: Sound
 
   let isPlaying = false
   let isLoading = true
+  let buttonRef: HTMLButtonElement
 
-  let [title, src, duration] = sound
-
-  const audioSrc = `/assets/sound/${src}`
+  let [title, _, duration] = sound
 
   let playAudio = () => {}
 
   let previousTimeout: NodeJS.Timeout
 
-  if (typeof window !== 'undefined') {
-    const audioContext = window.AudioContext || window.webkitAudioContext
-    const context = new audioContext()
+  onMount(async () => {
+    let audio = await lazyLoadSound(sound, buttonRef)
 
-    let audio: AudioBuffer
+    // @ts-ignore
+    let audioContext = window.AudioContext || window.webkitAudioContext
+    let context = new audioContext()
 
-    fetch(audioSrc)
-      .then((response) => response.arrayBuffer())
-      .then((arrayBuffer) => context.decodeAudioData(arrayBuffer))
-      .then((buffer) => {
-        audio = buffer
+    isLoading = false
 
-        isLoading = false
+    playAudio = () => {
+      if (previousTimeout) clearTimeout(previousTimeout)
 
-        playAudio = () => {
-          if (previousTimeout) clearTimeout(previousTimeout)
+      console.log(audio)
 
+      isPlaying = false
+
+      let source = context.createBufferSource()
+
+      source.buffer = audio
+      source.connect(context.destination)
+
+      requestAnimationFrame(() => {
+        isPlaying = true
+        source.start(0)
+
+        previousTimeout = setTimeout(() => {
           isPlaying = false
 
-          const source = context.createBufferSource()
-
-          source.buffer = audio
-          source.connect(context.destination)
-
-          requestAnimationFrame(() => {
-            isPlaying = true
-            source.start()
-
-            previousTimeout = setTimeout(() => {
-              isPlaying = false
-
-              previousTimeout = null
-            }, duration * 1000 + 750)
-          })
-        }
+          previousTimeout = null
+        }, duration * 1000 + 750)
       })
-  }
+    }
+  })
 </script>
 
-<button class="button" style="--duration: {duration}s" on:click={playAudio}>
+<button bind:this={buttonRef} class="button" style="--duration: {duration}s" on:click={playAudio}>
   <h6 class="title">{title}</h6>
   <div class="overlay {isPlaying ? '--playing' : ''} {isLoading ? '--loading' : ''}" />
 </button>
