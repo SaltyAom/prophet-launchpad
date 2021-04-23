@@ -20,7 +20,11 @@ writeFileSync(
     navigator.mediaSession.metadata = new MediaMetadata({
       title: 'Prophet Launchpad',
       artist: 'Prophet',
-      album: 'Prophet Launchpad'
+      album: 'Prophet Launchpad',
+      artwork: [
+        { src: '/assets/pwa/icons/prophet@192.jpg', sizes: '192x192', type: 'image/jpg' },
+        { src: '/assets/pwa/icons/prophet@512.jpg', sizes: '512x512', type: 'image/jpg' },
+      ]
     })
 
   if ('serviceWorker' in navigator)
