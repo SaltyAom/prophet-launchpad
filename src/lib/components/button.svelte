@@ -45,7 +45,7 @@
           isPlaying = false
 
           previousTimeout = null
-        }, duration * 1000 + 750)
+        }, duration * 1000 + 750 + 32)
       })
     }
   })
@@ -65,6 +65,8 @@
         height: 180px
         background-color: #007aff
         outline: none
+        -webkit-tap-highlight-color: transparent
+
 
     .overlay
         @apply top-0 left-0 absolute w-0 h-full
