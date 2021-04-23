@@ -19,7 +19,6 @@ export const lazyLoadSound: LazyLoadSound = async (sound, buttonRef) =>
         })
       },
       {
-        root: document,
         threshold: 0.1
       }
     )

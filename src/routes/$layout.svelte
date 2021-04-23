@@ -9,7 +9,7 @@
   <meta name="og:title" content="ศาสดา launchpad" />
   <meta name="og:description" content="สวัสดีครับท่านสมาชิก but it's launchpad" />
   <meta property="og:site_name" content="ศาสดา launchpad" />
-  <meta property="og:image" content="https://prophet-launchpad.netlify.app/img/prophet-launchpad.jpg" />
+  <meta property="og:image" content="https://prophet-launchpad.netlify.app/assets/image/prophet-button.jpg" />
   <meta property="og:image:width" content="1920" />
   <meta property="og:image:height" content="1080" />
   <meta property="og:locale" content="th_TH" />
@@ -21,8 +21,7 @@
       navigator.mediaSession.metadata = new MediaMetadata({
         title: 'Prophet Launchpad',
         artist: 'Prophet',
-        album: 'Prophet',
-        artwork: [{ src: 'podcast.jpg' }]
+        album: 'Prophet Launchpad',
       })
   </script>
 
