@@ -1,6 +1,6 @@
 {
   "name": "prophet-launchpad",
-  "version": "0.0.0.alpha-1",
+  "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
