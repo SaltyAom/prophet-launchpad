@@ -27,8 +27,6 @@
     playAudio = () => {
       if (previousTimeout) clearTimeout(previousTimeout)
 
-      console.log(audio)
-
       isPlaying = false
 
       let source = context.createBufferSource()

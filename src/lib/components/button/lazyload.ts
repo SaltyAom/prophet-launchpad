@@ -13,7 +13,6 @@ export const lazyLoadSound: LazyLoadSound = async (sound, buttonRef) =>
             observer.disconnect()
 
             const audioBuffer = await loadAudio(sound)
-            console.log(audioBuffer)
 
             resolve(audioBuffer)
           }
