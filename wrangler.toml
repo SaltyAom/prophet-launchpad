@@ -1,0 +1,10 @@
+name = "prophet-launchpad"
+type = "webpack"
+account_id = "6a91d0ed461765dd6430707638ae2856"
+workers_dev = true
+# route = ""
+# zone_id = ""
+
+[site]
+bucket = "./build"
+entry-point = "./workers-site"

@@ -15,7 +15,6 @@
   <meta property="og:locale" content="th_TH" />
   <meta property="og:type" content="website" />
 
-  <link rel="stylesheet" type="text/css" href="/index.css" />
   <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
   <script>
     if ('mediaSession' in navigator)

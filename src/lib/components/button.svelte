@@ -53,25 +53,30 @@
 </script>
 
 <button
-  class="relative button border-0 px-4 rounded"
+  class="button"
   style="--duration: {duration}s"
   on:click={playAudio}
 >
-  <h6 class="text-white text-xl">{title}</h6>
+  <h6 class="title">{title}</h6>
   <div
-    class="top-0 left-0 absolute w-0 h-full overlay {isPlaying ? '--playing' : ''} {isLoading
+    class="overlay {isPlaying ? '--playing' : ''} {isLoading
       ? '--loading'
       : ''}"
   />
 </button>
 
 <style lang="sass">
+    .title
+        @apply text-white text-xl
+
     .button
+        @apply relative border-0 px-4 rounded
         height: 180px
         background-color: #007aff
         outline: none
 
     .overlay
+        @apply top-0 left-0 absolute w-0 h-full
         background-color: rgba(255,255,255,.25)
         transition: width .425s ease-out
 
