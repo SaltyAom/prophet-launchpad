@@ -20,7 +20,7 @@
 
     // @ts-ignore
     let audioContext = window.AudioContext || window.webkitAudioContext
-    let context = new audioContext()
+    let context: AudioContext = new audioContext()
 
     isLoading = false
 

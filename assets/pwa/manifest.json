@@ -1,0 +1,22 @@
+{
+  "short_name": "Launchpad",
+  "name": "Prophet Launchpad",
+  "icons": [
+    {
+      "src": "/assets/pwa/icons/prophet@192.jpg",
+      "type": "image/jpg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/pwa/icons/prophet@512.jpg",
+      "type": "image/jpg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#212121",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#212121",
+  "orientation": "portrait"
+}

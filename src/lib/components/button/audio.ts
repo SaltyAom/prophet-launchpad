@@ -8,6 +8,7 @@ export const loadAudio: LoadAudio = (sound) =>
 
     const audioSrc = `/assets/sound/${src}`
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const audioContext = window.AudioContext || window.webkitAudioContext
     const context = new audioContext()
