@@ -15,7 +15,8 @@
   let previousTimeout: NodeJS.Timeout
 
   if (typeof window !== 'undefined') {
-    const context = new AudioContext()
+    const audioContext = window.AudioContext || window.webkitAudioContext
+    const context = new audioContext()
 
     let audio: AudioBuffer
 
@@ -52,17 +53,9 @@
   }
 </script>
 
-<button
-  class="button"
-  style="--duration: {duration}s"
-  on:click={playAudio}
->
+<button class="button" style="--duration: {duration}s" on:click={playAudio}>
   <h6 class="title">{title}</h6>
-  <div
-    class="overlay {isPlaying ? '--playing' : ''} {isLoading
-      ? '--loading'
-      : ''}"
-  />
+  <div class="overlay {isPlaying ? '--playing' : ''} {isLoading ? '--loading' : ''}" />
 </button>
 
 <style lang="sass">
