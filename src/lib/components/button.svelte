@@ -2,6 +2,7 @@
   import type { Sound } from '$lib/data/sound'
   import { onMount } from 'svelte'
   import { lazyLoadSound } from './button/lazyload'
+  import { updateMediaSession } from './button/mediaSessoin'
 
   export let sound: Sound
 
@@ -37,6 +38,8 @@
       requestAnimationFrame(() => {
         isPlaying = true
         source.start(0)
+
+        updateMediaSession(source)
 
         previousTimeout = setTimeout(() => {
           isPlaying = false
