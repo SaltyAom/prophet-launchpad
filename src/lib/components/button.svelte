@@ -26,6 +26,9 @@
     isLoading = false
 
     playAudio = () => {
+      console.log('Play')
+      console.log(audio)
+
       if (previousTimeout) clearTimeout(previousTimeout)
 
       isPlaying = false
@@ -35,38 +38,45 @@
       source.buffer = audio
       source.connect(context.destination)
 
+      source.start(0)
+
+      updateMediaSession(source)
+
       requestAnimationFrame(() => {
-        isPlaying = true
-        source.start(0)
-
-        updateMediaSession(source)
-
-        previousTimeout = setTimeout(() => {
-          isPlaying = false
-
-          previousTimeout = null
-        }, duration * 1000 + 750 + 32)
+        requestAnimationFrame(() => {
+          isPlaying = true
+        })
       })
+
+      previousTimeout = setTimeout(() => {
+        isPlaying = false
+
+        previousTimeout = null
+      }, duration * 1000 + 750 + 32)
     }
   })
 </script>
 
-<button bind:this={buttonRef} class="button" style="--duration: {duration}s" on:click={playAudio}>
-  <h6 class="title">{title}</h6>
-  <div class="overlay {isPlaying ? '--playing' : ''} {isLoading ? '--loading' : ''}" />
-</button>
+<div class="wrapper">
+  <button bind:this={buttonRef} class="button" style="--duration: {duration}s" on:click={playAudio}>
+    <h6 class="title">{title}</h6>
+    <div class="overlay {isPlaying ? '--playing' : ''} {isLoading ? '--loading' : ''}" />
+  </button>
+</div>
 
 <style lang="sass">
     .title
-        @apply text-white text-xl
+        @apply text-white text-2xl font-normal break-words
+
+    .wrapper
+        @apply relative aspect-w-1 aspect-h-1
 
     .button
-        @apply relative border-0 px-4 rounded
-        height: 180px
+        @apply absolute border-0 px-4 rounded
+        height: 100%
         background-color: #007aff
         outline: none
-        -webkit-tap-highlight-color: transparent
-
+        -webkit-tap-highlight-color: transparent        
 
     .overlay
         @apply top-0 left-0 absolute w-0 h-full
