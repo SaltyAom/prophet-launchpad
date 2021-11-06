@@ -1,9 +1,9 @@
 # Prophet Launchpad
 สวัสดีครับท่านศาสดา button เวอร์ชั่น 2
 
-![https://raw.githubusercontent.com/SaltyAom/prophet-launchpad/main/assets/image/prophet-launchpad.jpg](สวัสดีครับท่านศาสดา button 2)
-
 [ลองเล่นเลย](https://prophet-button.netlify.app)
+
+<img src="https://raw.githubusercontent.com/SaltyAom/prophet-launchpad/main/assets/image/prophet-launchpad.jpg" alt="สวัสดีครับท่านศาสดา button 2" >
 
 ## Prerequisted
 1. ลง [Node.js](http://nodejs.org/)
