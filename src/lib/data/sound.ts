@@ -95,6 +95,12 @@ export const sounds: Sounds = [
 		'tâa meung chôp lia hĕe măa meung gôr lia bpai bpai.mp3',
 		3.1
 	],
+	['ไปยังไอพวกชาตินรก ไอสัตว์ชิบหายมีกล้วย','Pai Yang Ai Phuak Chat Narok Ai Sat Chip Hai Mi Khuai.mp3', 2.6],
+	['มึงทำไปทำเชี่ยอะไร ทำเพื่ออะไร', 'Mueng Tham Pai Tham Hia Arai Tham Phuea Arai.mp3', 2.2],
+	['มึงอยากให้คนนู้นคนนี้เขาเป็น ถูกใจมึงไปหมดเลย ไอเชี่ย','Mueng Yak Hai Khon Nun Khon Ni Khao Pen Thukchai Mueng Pai Mot Loei Ai Hia.mp3', 3.1],
+	['มึงดียังไง ไอเชี่ยไอสัตว์ มึงดีตรงไหนอ๋อ','Mueng Di Yangngai Ai Hia Ai Sat Mueng Di Trong Nai O.mp3', 2.5],
+	['เก่งเจ๋งอ๋อ ไอเชี่ย', 'Keng Cheng O Ai Hia.mp3', 1.2],
+	['ส้นตีนไอสัตว์', 'Sontin Ai Sat.mp3', 1.2],
 	['เงื่อนโว้ย', 'ngîan wói.mp3', 2.1],
 	['เงื่อนจริงจริ๊ง', 'ngîan jing jà-ríng.mp3', 2.1],
 	[
