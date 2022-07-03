@@ -101,6 +101,10 @@ export const sounds: Sounds = [
 	['มึงดียังไง ไอเชี่ยไอสัตว์ มึงดีตรงไหนอ๋อ','Mueng Di Yangngai Ai Hia Ai Sat Mueng Di Trong Nai O.mp3', 2.5],
 	['เก่งเจ๋งอ๋อ ไอเชี่ย', 'Keng Cheng O Ai Hia.mp3', 1.2],
 	['ส้นตีนไอสัตว์', 'Sontin Ai Sat.mp3', 1.2],
+	['แล้วหีนั้นใหญ่ ชามกระเบื้อง ชามตราไก่ ก๋วยเตื่ยว','láew hĕe nán yài chaam grà-bêuuang chaam dtraa gài kury tuan.mp3',4.5],
+	['จงปล่อยให้มันเงียนขี้เย็ดดด','jong bplòi hâi man ngiian kêe yét.mp3',3.5],
+	['เหมียวว แบร่ แบร่','meaw meaw bao bao.mp3',2.2],
+	['เห็นหลายคนมีปัญหาควยสั้น ควยเล็ก เลยไปอัปเกรด ควย','hĕn lăai kon mee bpan-hăa kuuay sân · kuuay lék · loiie bpai àp grèt · kuuay.mp3',5.3],
 	['เงื่อนโว้ย', 'ngîan wói.mp3', 2.1],
 	['เงื่อนจริงจริ๊ง', 'ngîan jing jà-ríng.mp3', 2.1],
 	[
